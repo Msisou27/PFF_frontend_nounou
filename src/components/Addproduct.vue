@@ -1,8 +1,8 @@
 <template>
     <div>
         
-   <h2>Création d'une annonce</h2>
-      <form class="col-md-6 text-left border p-3 m-auto">
+   <h2 class="vert text-white col-md-6 ml-auto mr-auto mt-4 mb-4 rounded">Création d'une annonce</h2>
+      <form class="col-md-6 text-left border p-3 m-auto bg-light">
     
   <div class="form-row"> 
     <div class="form-group col-md-6">
@@ -59,10 +59,10 @@
       <input v-model="price" type="text" class="form-control" id="inputZip">
     </div>
 </div>
-  <input type="file" @change="onFileChanged">
-  <button @click="onUpload">Upload</button>
+  <input class="col-md-10 bg-white border mt-3" type="file" @change="onFileChanged">
+  <button @click="onUpload">Telecharger</button>
 
-  <p @click="newProduct()" type="submit" value="Submit" class="btn btn-primary mt-4">Création nouvelle annonce</p>
+  <p @click="newProduct()" type="submit" value="Submit" class="col-md-10 ml-5 btn text-white mt-4 bleu">Création nouvelle annonce</p>
 </form>
     
  </div>
@@ -132,5 +132,10 @@ export default {
 </script>
 
 <style scoped>
-
+.bleu {
+   background-color: #539ee4;
+}
+.vert {
+  background-color: #00c5ad;
+}
 </style>

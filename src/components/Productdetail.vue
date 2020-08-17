@@ -13,7 +13,10 @@
                 <h4 class="price text-left">{{prod.price}} €</h4>
                 <p class="condition text-white">{{prod.used}}</p>
                 </div>
-            </div>        
+            </div> 
+            <div class="border col-md-10 ml-auto mr-auto mt-4">
+                {{users.firstname}}{{users.email}}{{users.location}}      
+            </div>       
    
 </div>
 </template>
@@ -34,6 +37,7 @@ export default {
     mounted: async function () { 
     const res = await nounou.recupProduct(this.$route.params.slug)
     this.prod = res.data.data
+    this.users = res.data.user
     console.log(this.prod)
     console.log(res.data)
     // const resp = await nounou.recupAllUser()

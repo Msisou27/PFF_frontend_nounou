@@ -1,11 +1,11 @@
 <template>
     <div >
 <div class="">
-  <form class="form-inline bg-secondary pt-1 pb-1 mb-5 pl-5">
-      <input v-model="q" class="form-control col-md-3 mr-5 mt-2" @keyup="searchProduct" type="search" placeholder="Search" aria-label="Search">
+  <form class="form-inline bleu pt-1 pb-1 mb-5 pl-5">
+      <input v-model="q" class="form-control col-md-3 mr-5 m-2" @keyup="searchProduct" type="search" placeholder="Search" aria-label="Search">
       
       <div class="form-group col-md-4 mr-5">
-      <label for="exampleFormControlSelect2" class="mr-2 text-white ">Catégories</label>
+      <label for="exampleFormControlSelect2" class="mr-2 text-secondary ">Catégories</label>
       <select v-model="key"  @change="onChange($event)" type="text" class="form-control" id="exampleFormControlSelect2" >
         <option>Jeux d'extérieurs</option>
         <option>Jeux d’intérieurs</option>
@@ -17,7 +17,7 @@
         </select>
       </div>
       <div class="form-group col-md-3 mr-5">
-      <label for="exampleFormControlSelect2" class="mr-2 text-white">Condition</label>
+      <label for="exampleFormControlSelect2" class="mr-2 text-secondary">Condition</label>
       <select v-model="key2"  @change="onChangeCondition($event)" type="text" class="form-control" id="exampleFormControlSelect2" >
         <option>Comme neuf</option>
         <option>Très bon état</option>
@@ -146,5 +146,8 @@ height:9%;
   font-size:14px;
   font-weight: bolder;
 }
-
+.bleu {
+  border-bottom: 2px solid #539ee4;
+  background-color: rgba(83, 158, 228, 0.2);
+}
 </style>

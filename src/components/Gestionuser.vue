@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h1>Gestion des utilisateurs</h1>
-        
+        <h2 class="mb-5">Gestion des utilisateurs</h2>
+ <div class="row ">  
+     <div class="col-md-5">
         <h4 class="border-bottom bg-light">Administrateurs</h4>
         <div v-for="(user, index) in users" :key="index">
           <div class="row d-flex justify-content-center p-2">
@@ -9,7 +10,9 @@
           <div v-if="users[index].is_admin" @click="AdminUser(users[index].id)" class="btn btn-danger">Admin->User</div>
           </div>
         </div>
-        
+      </div>  
+
+      <div class="col-md-5">
         <h4 class="border-bottom bg-light">Utilisateurs</h4>
         <div v-for="(user2, index) in users" :key="index">
           <div class="row d-flex justify-content-center p-2">
@@ -17,8 +20,8 @@
           <div v-if="!users[index].is_admin" @click="Useradmin(users[index].id)" type="submit" value="submit" class="btn btn-success">User->Admin</div>
           </div>
         </div>
-
-
+      </div>
+</div>
     </div>
 </template>
 
