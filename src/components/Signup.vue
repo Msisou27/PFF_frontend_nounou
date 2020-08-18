@@ -71,11 +71,11 @@ export default {
         town:'',
         phone:'',
       }),
-  //    created() {
-  //   if(localStorage.getItem('token')=='null'){
-  //       window.location.href = '/'
-  //   }
-  // }, 
+     created() {
+    if(localStorage.getItem('token')=='null'){
+        window.location.href = '/'
+    }
+  }, 
   methods:{
       newUser: async function () {
         // this.error = "";
