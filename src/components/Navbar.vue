@@ -9,18 +9,18 @@
     <ul class="navbar-nav">
       <li class="nav-link ml-5"><router-link  to="/">Home Page</router-link></li> 
       <li class="nav-link ml-5"><router-link to="/Annonces">Annonces</router-link></li>
-      <li class="nav-link ml-5" ><router-link to="/Profil">Mon profil</router-link></li>
-      <li class="nav-link ml-5" ><router-link to="/Testtest">Chat</router-link></li>
+      <li v-if="!isNotConnect()" class="nav-link ml-5" ><router-link to="/Profil">Mon profil</router-link></li>
+      <li v-if="!isNotConnect()" class="nav-link ml-5" ><router-link to="/Testtest">Chat</router-link></li>
     </ul>
     <div class="nav-item dropdown mx-auto">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a v-if="isNotConnect()" class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            Connexion
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" ><router-link class="text-dark"  to="/Register">Register</router-link></a>
-          <a class="dropdown-item" ><router-link class="text-dark" to="/Login">Login</router-link></a>
-          <a @click="logout()" class="dropdown-item text-dark" href="">Logout</a>
+        <div  class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a  class="dropdown-item" ><router-link  class="text-dark"  to="/Register">Register</router-link></a>
+          <a  class="dropdown-item" ><router-link  class="text-dark" to="/Login">Login</router-link></a>
         </div>
+        <a v-if="!isNotConnect()" @click="logout()" class="text-white" href="">Logout</a>
       </div>
   </div>
 </nav> 
@@ -39,7 +39,9 @@ export default {
         localStorage.setItem('token', null)
         this.$router.go()
       },
-      
+      isNotConnect(){
+      return localStorage.getItem('token')=='null'
+    }
     },
 }
 </script>

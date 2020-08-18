@@ -94,7 +94,7 @@ export default {
 
         console.log(params);
         let res = await nounou.createUser(params);
-        location.href = '/Profil';
+        location.href = '/Login';
         location.reload();
         console.log(res);        
     },
