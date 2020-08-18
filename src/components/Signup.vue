@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>sign up</h1>
-        <form class="col-md-6 text-left border p-3 m-auto">
+        <h2 class="col-md-6 vert text-white ml-auto mr-auto mb-3 mt-5 rounded">Inscription</h2>
+        <form class="col-md-6 text-left border p-3 m-auto bg-light">
     <div class="form-row">
     <div class="form-group col-md-6">
        <label for="validationCustom01">First name</label>
@@ -15,11 +15,11 @@
    <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input v-model="email" type="email" class="form-control" id="inputEmail4">
+      <input v-model="email" type="email" class="form-control" id="inputEmail4" placeholder="Email">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input v-model="password" type="password" class="form-control" id="inputPassword4">
+      <label for="inputPassword4">Mot de passe</label>
+      <input v-model="password" type="password" class="form-control" id="inputPassword4" placeholder="Mot de passe">
     </div>
   </div>
   <div class="form-row">
@@ -35,19 +35,19 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">Villes</label>
-      <input v-model="town" type="text" class="form-control" id="inputCity">
+      <input v-model="town" type="text" class="form-control" id="inputCity" placeholder="Nom de ville">
     </div>
     <div class="form-group col-md-3">
       <label for="inputZip">CP</label>
-      <input v-model="location" type="text" class="form-control" id="inputZip">
+      <input v-model="location" type="text" class="form-control" id="inputZip" placeholder="code postal">
     </div>
     <div class="form-group col-md-3">
-      <label for="inputZip">mobile</label>
-      <input v-model="phone" type="phone" class="form-control" id="inputphone">
+      <label for="inputZip">Mobile</label>
+      <input v-model="phone" type="phone" class="form-control" id="inputphone" placeholder="N° de mobile">
     </div>
   </div>
   
-  <p @click="newUser()" type="submit" value="Submit" class="btn btn-primary mt-4">Sign in</p>
+  <p @click="newUser()" type="submit" value="Submit" class="btn bleu text-white mt-4">Valider son inscription</p>
 </form>
         
     </div>
@@ -104,5 +104,10 @@ export default {
 </script>
 
 <style scoped>
-    
+ .bleu {
+   background-color: #539ee4;
+}
+.vert {
+  background-color: #00c5ad;
+}     
 </style>

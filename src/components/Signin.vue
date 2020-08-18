@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>Log in to an existing account</h1>
+        <h2 class="col-lg-5 vert text-white ml-auto mr-auto mb-3 mt-5 rounded">Connectez-vous à un compte existant</h2>
 
         <!-- <div v-if="this.error" class="alert alert-danger mt-3" role="alert">
                 {{ this.error }}
             </div> -->
-      <form >
-          <div class="form-group col-lg-4 border m-auto p-3">
+      <form class="">
+          <div class="form-group col-lg-5 border m-auto p-3 bg-light">
         
         <label for="inputPassword5">Email</label>
         <input type="email" v-model="email" id="email" name="email" class="form-control" aria-describedby="passwordHelpBlock">
@@ -19,9 +19,9 @@
             Votre password doit contenir 8 caracteres minimum.
             </small>
 
-        <div type="submit" value="Submit" @click="signinUser()" class="btn btn-primary">Submit</div>
+        <div type="submit" value="Submit" @click="signinUser()" class="btn bleu text-white mt-2">Submit</div>
         <small id="passwordHelpBlock" class="form-text text-muted">
-            Don't have an account? Sign up.
+            Vous n'avez pas de coompte? <router-link class="text-white vert rounded p-1 ml-2" to="/Register">Inscription</router-link>
             </small>
             </div>
       </form>
@@ -67,5 +67,10 @@ methods: {
 </script>
 
 <style scoped>
-    
+.bleu {
+   background-color: #539ee4;
+}
+.vert {
+  background-color: #00c5ad;
+}    
 </style>

@@ -1,23 +1,23 @@
 <template>
     <div>
-        <h2 class="mb-5">Gestion des utilisateurs</h2>
- <div class="row ">  
-     <div class="col-md-5">
-        <h4 class="border-bottom bg-light">Administrateurs</h4>
+        <h2 class="m-5">Gestion des utilisateurs</h2>
+ <div class="row ml-auto mr-auto">  
+     <div class="col-md-6">
+        <h4 class=" bleu text-white rounded">Administrateurs</h4>
         <div v-for="(user, index) in users" :key="index">
-          <div class="row d-flex justify-content-center p-2">
-          <div v-if="users[index].is_admin" class="col-md-3 text-left">{{users[index].surname}} {{users[index].firstname}} </div>
-          <div v-if="users[index].is_admin" @click="AdminUser(users[index].id)" class="btn btn-danger">Admin->User</div>
+          <div v-if="users[index].is_admin" class="row col-md-12 ml-auto mr-auto d-flex justify-content-center p-2 bg-light mb-2">
+          <div class="col-md-9 text-left m-auto">{{users[index].created_at|formatDate}} | {{users[index].surname}} {{users[index].firstname}} </div>
+          <div @click="AdminUser(users[index].id)" class="btn text-white bleu">Admin->User</div>
           </div>
         </div>
       </div>  
 
-      <div class="col-md-5">
-        <h4 class="border-bottom bg-light">Utilisateurs</h4>
+      <div class="col-md-6">
+        <h4 class=" bleu text-white rounded">Utilisateurs</h4>
         <div v-for="(user2, index) in users" :key="index">
-          <div class="row d-flex justify-content-center p-2">
-          <div v-if="!users[index].is_admin" class="col-md-3 text-left">{{users[index].surname}} {{users[index].firstname}} </div>
-          <div v-if="!users[index].is_admin" @click="Useradmin(users[index].id)" type="submit" value="submit" class="btn btn-success">User->Admin</div>
+          <div v-if="!users[index].is_admin" class="row col-md-12 ml-auto mr-auto d-flex justify-content-center p-2 bg-light mb-2">
+          <div  class="col-md-9 text-left m-auto">{{users[index].created_at|formatDate}} | {{users[index].surname}} {{users[index].firstname}} </div>
+          <div  @click="Useradmin(users[index].id)" type="submit" value="submit" class="btn vert text-white">User->Admin</div>
           </div>
         </div>
       </div>
@@ -70,5 +70,10 @@ export default {
 </script>
 
 <style scoped>
-
+.bleu {
+  background-color: #539ee4;
+}
+.vert {
+  background-color: #00c5ad;
+}
 </style>

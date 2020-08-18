@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>Modifier Annonce</h1>
-        <form class="col-md-6 text-left border p-3 m-auto">
+        <h2 class="vert text-white col-md-6 ml-auto mr-auto mt-4 mb-4 rounded">Modifier Annonce</h2>
+        <form class="col-md-6 text-left border p-3 m-auto bg-light">
     
   <div class="form-row"> 
     <div class="form-group col-md-6">
@@ -59,7 +59,7 @@
     </div>
 </div>
   
-  <p @click="modifProduct()" type="submit" value="Submit" class="btn btn-primary mt-4">Modification de votre annonce</p>
+  <p @click="modifProduct()" type="submit" value="Submit" class="col-md-10 ml-5 btn text-white mt-4 bleu">Modification de votre annonce</p>
 </form>
     </div>
 </template>
@@ -126,5 +126,10 @@ export default {
 </script>
 
 <style scoped>
-
+.bleu {
+   background-color: #539ee4;
+}
+.vert {
+  background-color: #00c5ad;
+}
 </style>

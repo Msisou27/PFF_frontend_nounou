@@ -1,8 +1,9 @@
 <template>
     <div>
         
-   <h2 class="vert text-white col-md-6 ml-auto mr-auto mt-4 mb-4 rounded">Création d'une annonce</h2>
-      <form class="col-md-6 text-left border p-3 m-auto bg-light">
+   <h2 class="vert text-white col-md-6 ml-auto mr-auto mt-4 mb-2 text-decoration-none rounded">Création d'une annonce</h2>
+   <!-- <div class="mb-2"><router-link class="retour bleu text-secondary p-1 rounded text-decoration-none" to="/Profil">Retour a mon profil</router-link></div> -->
+      <form class="col-md-6 text-left border mt-1 p-3 m-auto bg-light">
     
   <div class="form-row"> 
     <div class="form-group col-md-6">
@@ -137,5 +138,9 @@ export default {
 }
 .vert {
   background-color: #00c5ad;
+}
+.retour {
+  background-color: rgba(83, 158, 228, 0.2);
+  border-bottom: 2px solid #539ee4;
 }
 </style>
