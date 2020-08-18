@@ -2,8 +2,10 @@
     <div >
 <div class="">
   <form class="form-inline bleu pt-1 pb-1 mb-5 pl-5">
-      <input v-model="q" class="form-control col-md-3 mr-5 m-2" @keyup="searchProduct" type="search" placeholder="Search" aria-label="Search">
-      
+    
+      <input v-model="q" class="form-control col-md-3 m-2" @keyup="searchProduct" type="search" placeholder="Search" aria-label="Search">
+      <a href="" class="mr-3"><img src="https://img.icons8.com/ios/30/000000/cancel.png"/></a>
+
       <div class="form-group col-md-4 mr-5">
       <label for="exampleFormControlSelect2" class="mr-2 text-secondary ">Catégories</label>
       <select v-model="key"  @change="onChange($event)" type="text" class="form-control" id="exampleFormControlSelect2" >

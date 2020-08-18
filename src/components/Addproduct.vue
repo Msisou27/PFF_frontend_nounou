@@ -9,6 +9,7 @@
     <div class="form-group col-md-6">
     <label for="validationCustom01">Titre</label>
       <input v-model="title" id="title" name="title" type="text" class="form-control" placeholder="Titre de l'annonce">
+      x
     </div>
     <div class="form-group col-md-6">
        <label for="validationCustom01">Description courte</label>

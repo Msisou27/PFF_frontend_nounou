@@ -20,9 +20,10 @@
           <a  class="dropdown-item" ><router-link  class="text-dark"  to="/Register">Register</router-link></a>
           <a  class="dropdown-item" ><router-link  class="text-dark" to="/Login">Login</router-link></a>
         </div>
-        <a v-if="!isNotConnect()" @click="logout()" class="text-white" href="">Logout</a>
+        
       </div>
-  </div>
+  </div
+  ><a v-if="!isNotConnect()" @click="logout()" class="text-white" href="">Logout</a>
 </nav> 
   
     </div>
