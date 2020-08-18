@@ -3,7 +3,7 @@
     <div class="col-md-12 mt-4 mb-4 row">     
         <h2 class="col-md-6">{{detail.firstname}}, content de vous revoir !</h2>
         <router-link class="col-md-2 ml-auto btn mt-2 text-uppercase route" to="/Productcrea" >Création d'annonces</router-link>
-        <router-link class="col-md-2 mr-auto btn mt-2 ml-5 text-uppercase route" to="/Gestion" v-if="detail.is_admin">Administrateur</router-link>       
+        <router-link class="col-md-2 mr-auto btn mt-2 ml-5 text-uppercase route" to="/Gestion" >Administrateur</router-link>       
     </div> 
 
 <div class="row m-auto">
@@ -181,4 +181,5 @@ export default {
  text-decoration: none;
  border-left: 2px solid #539ee4;
 }
+/* v-if="detail.is_admin" */
 </style>
