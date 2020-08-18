@@ -37,6 +37,11 @@ export default {
         message:'',
         chat:''
     }),
+    created() {
+    if(localStorage.getItem('token')=='null'){
+        window.location.href = '/'
+        }
+    },     
     mounted: async function () { 
   
     const resp = await nounou.chatAll()
