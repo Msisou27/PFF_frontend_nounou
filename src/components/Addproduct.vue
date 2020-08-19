@@ -9,7 +9,7 @@
     <div class="form-group col-md-6">
     <label for="validationCustom01">Titre</label>
       <input v-model="title" id="title" name="title" type="text" class="form-control" placeholder="Titre de l'annonce">
-      x
+      
     </div>
     <div class="form-group col-md-6">
        <label for="validationCustom01">Description courte</label>
@@ -61,7 +61,7 @@
       <input v-model="price" type="text" class="form-control" id="inputZip">
     </div>
 </div>
-  <input class="col-md-10 bg-white border mt-3" type="file" @change="onFileChanged">
+  <input class="col-md-10 bg-white border mt-3" type="file" @change="uploadImage">
   <button @click="onUpload">Telecharger</button>
 
   <p @click="newProduct()" type="submit" value="Submit" class="col-md-10 ml-5 btn text-white mt-4 bleu">Création nouvelle annonce</p>
@@ -72,7 +72,8 @@
 
 <script>
 
-import nounou from '@/services/nounou'
+import nounou from '@/services/nounou';
+
 
 export default {
    name:'Addproduct',
@@ -122,8 +123,11 @@ export default {
       // location.reload();
       console.log(res);
       },
-      onFileChanged(event){
-        this.selectedFile = event.target.files[0]
+      uploadImage(e){
+        
+
+        console.log(e.target.files[0]);
+
       },
       onUpload(){
         const formData = new FormData()

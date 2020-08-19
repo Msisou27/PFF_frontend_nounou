@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h2 class="col-md-6 vert text-white ml-auto mr-auto mb-3 mt-5 rounded">Inscription</h2>
-        <form class="col-md-6 text-left border p-3 m-auto bg-light">
+  <h2 class="col-md-6 vert text-white ml-auto mr-auto mb-3 mt-5 rounded">Inscription</h2>
+       
+  <form class="col-md-6 text-left border p-3 ml-auto mr-auto bg-light mt-2">
     <div class="form-row">
     <div class="form-group col-md-6">
        <label for="validationCustom01">First name</label>
@@ -49,7 +50,12 @@
   
   <p @click="newUser()" type="submit" value="Submit" class="btn bleu text-white mt-4">Valider son inscription</p>
 </form>
-        
+      <div v-if="this.message" class="alert alert-success col-md-6 ml-auto mr-auto mt-2" role="alert">
+       {{this.message}}
+      </div>
+      <div v-else-if="this.error" class="alert alert-danger col-md-6 ml-auto mr-auto mt-2" role="alert">
+       La création de votre compte ne peux aboutir. Veuillez réessayer plus tard.
+      </div>   
     </div>
 </template>
 
@@ -61,6 +67,8 @@ import nounou from '@/services/nounou'
 export default {
     name:'Signup',
       data: ()=>({
+        message:'',
+        error:'',
         firstname:'',
         surname:'',
         email:'',
@@ -71,14 +79,15 @@ export default {
         town:'',
         phone:'',
       }),
-     created() {
-    if(localStorage.getItem('token')=='null'){
-        window.location.href = '/'
-    }
-  }, 
+  //    created() {
+  //   if(localStorage.getItem('token')=='null'){
+  //       window.location.href = '/'
+  //   }
+  // }, 
   methods:{
       newUser: async function () {
-        // this.error = "";
+        this.message = '';
+        this.error =  '';
 
         var params = {
         firstname: this.firstname,
@@ -94,8 +103,11 @@ export default {
 
         console.log(params);
         let res = await nounou.createUser(params);
-        location.href = '/Login';
-        location.reload();
+        this.message = res.data.message
+        this.error = res.data.validation_error
+        if (this.message){
+        setTimeout(()=>{  location.href = '/Login'; }, 2000)}
+        
         console.log(res);        
     },
   

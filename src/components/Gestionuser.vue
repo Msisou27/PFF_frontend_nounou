@@ -41,6 +41,11 @@ export default {
     this.is_admin = 1
     
   },
+  created() {
+    if(localStorage.getItem('token')=='null'){
+        window.location.href = '/'
+    }
+  },
   methods: {
     Useradmin: async function (id) {
     

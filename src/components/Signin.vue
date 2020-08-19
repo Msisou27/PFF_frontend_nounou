@@ -1,10 +1,7 @@
 <template>
     <div>
-        <h2 class="col-lg-5 vert text-white ml-auto mr-auto mb-3 mt-5 rounded">Connectez-vous à un compte existant</h2>
-
-        <!-- <div v-if="this.error" class="alert alert-danger mt-3" role="alert">
-                {{ this.error }}
-            </div> -->
+        <h2 class="col-lg-5 vert text-white ml-auto mr-auto mb-3 mt-5 rounded">Connectez-vous à un compte existant</h2>              
+            
       <form class="">
           <div class="form-group col-lg-5 border m-auto p-3 bg-light">
         
@@ -25,6 +22,8 @@
             </small>
             </div>
       </form>
+        <div v-if="this.message" class="alert alert-success col-lg-5 ml-auto mr-auto mt-3" role="alert">{{this.message}}</div>
+        <div v-else-if="this.message_error" class="alert alert-danger col-lg-5 ml-auto mr-auto mt-3" role="alert">{{this.message_error}}</div>
     </div>
 </template>
 
@@ -38,10 +37,13 @@ data: ()=>({
     email:'',
     password:'',
     error:'',
+    message:'',
+    message_error:'',
 }),
 methods: {
     signinUser: async function () {
-        // this.error = "";
+        this.message ="";
+        this.message_error = "";
 
         var params = {
         email: this.email,
@@ -49,13 +51,16 @@ methods: {
         }
         console.log(params)
         let res = await nounou.loginUser(params);
+        this.message = res.data.message
+        this.message_error = res.data.message_error
         console.log(res);
 
-        
-            localStorage.setItem('token', this.$store.state.token + res.data.token)
-            location.href='/Annonces'
-            console.log(res.data.email)
-            console.log(res.data.token)
+        localStorage.setItem('token', this.$store.state.token + res.data.token)
+        if (this.message){
+        setTimeout(()=>{  location.href = '/Annonces'; }, 2000)}
+        // location.href='/Annonces'
+        console.log(res.data.email)
+        console.log(res.data.token)
         
     },
     
