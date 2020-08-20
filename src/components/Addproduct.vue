@@ -3,7 +3,7 @@
         
    <h2 class="vert text-white col-md-6 ml-auto mr-auto mt-4 mb-2 text-decoration-none rounded">Création d'une annonce</h2>
    <!-- <div class="mb-2"><router-link class="retour bleu text-secondary p-1 rounded text-decoration-none" to="/Profil">Retour a mon profil</router-link></div> -->
-      <form class="col-md-6 text-left border mt-1 p-3 m-auto bg-light">
+      <form class="col-md-6 text-left border mt-1 p-3 ml-auto mr-auto mb-2 bg-light">
     
   <div class="form-row"> 
     <div class="form-group col-md-6">
@@ -67,6 +67,13 @@
   <p @click="newProduct()" type="submit" value="Submit" class="col-md-10 ml-5 btn text-white mt-4 bleu">Création nouvelle annonce</p>
 </form>
     
+    <div v-if="this.validation" class="col-md-6 m-auto alert alert-success" role="alert">
+    Votre annonce vient d'être publier.
+    </div>  
+    <div v-else-if="!this.validation" class="col-md-6 m-auto alert alert-secondary" role="alert">
+    Veuillez saisir votre annonce. Vous serez redirigé vers votre profi une validée.
+    </div>   
+
  </div>
 </template>
 
@@ -89,6 +96,8 @@ export default {
       town:'',
       price:'',
       image:'',
+     
+      validation:'',
   
    }),
     created() {
@@ -105,6 +114,8 @@ export default {
   },
   methods: {
       newProduct: async function(){
+      this.validation = "";
+      
 
       var params = {
       title: this.title,
@@ -119,7 +130,10 @@ export default {
       }
       console.log(params);
       let res = await nounou.createProduct(params);
-      // location.href = '/Profil';
+      this.validation =  res.data.message
+      
+      if (this.validation){
+        setTimeout(()=>{  location.href = '/Profil'; }, 2000)}
       // location.reload();
       console.log(res);
       },

@@ -10,73 +10,32 @@
       </div>
     
     <h2>Les annonces en ligne</h2>
-    <div class="card-deck">
-  <div class="card">
-    <img src="" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+    <div class="col-md-12 row ">
+      <div class="col-md-3 border ml-auto mr-3 p-0"> test
+        <div class="bleu text-white">test</div>
+      </div>
+      <div class="col-md-3 border mr-3 p-0"> test
+        <div class="bleu text-white">test</div>
+      </div>
+      <div class="col-md-3 border mr-auto p-0"> test
+        <div class="bleu text-white">test</div>
+      </div>
     </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img src="" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img src="" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
 
     <h2>Les Actualités du Coin des nounous</h2>  
 
- <div class="card-deck">
-  <div class="card">
-    <img src="" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    <div class="col-md-12 row ">
+      <div class="col-md-3 border ml-auto mr-4 p-0"> Image
+        <div class="border">test</div>
+      </div>
+      <div class="col-md-3 border mr-4 p-0"> Image
+        <div class="border">test</div>
+      </div>
+      <div class="col-md-3 border mr-auto p-0"> Image
+        <div class="border">test</div>
+      </div>
     </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img src="" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img src="" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
     
  <div class="jumbotron jumbotron-fluid">
         <div class="container">
@@ -102,5 +61,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .bleu {
+   background-color: #539ee4;
+}
 </style>

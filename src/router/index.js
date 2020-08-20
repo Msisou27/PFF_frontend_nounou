@@ -11,6 +11,7 @@ import Product from '../views/Product.vue'
 import Productcrea from '../views/Productcrea.vue'
 import Updateproduct from '../views/Updateproduct.vue'
 import Testtest from '../views/Testtest.vue'
+import Foot from '../views/Foot.vue'
 
 Vue.use(VueRouter)
 
@@ -70,6 +71,11 @@ Vue.use(VueRouter)
     name: 'Testtest',
     component: Testtest
   },
+  {
+    path: '/Foot',
+    name: 'Foot',
+    components: Foot
+  }
  
 ]
 

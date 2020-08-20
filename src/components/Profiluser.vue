@@ -57,6 +57,10 @@
   
       <p @click="updateUser()" type="submit" value="Submit" class="btn bleu text-white">Modifier mes données utilisateur</p>
     </form>
+
+      <div v-if="this.message" class="alert alert-success mt-2" role="alert">
+      {{this.message}}
+      </div>
  </div>
 
        <div class="col-md-6">
@@ -100,6 +104,7 @@ export default {
     location:'',
     town:'',
     phone:'',
+    message:'',
   }),
   created() {
     if(localStorage.getItem('token')=='null'){
@@ -128,7 +133,8 @@ export default {
   },
   methods:{
     updateUser: async function () {
-    
+      this.message ='';
+
       var params = {
       id: this.detail.id,
       firstname: this.firstname,
@@ -143,6 +149,9 @@ export default {
 
       console.log(params);
       let res = await nounou.modifyUser(params);
+      this.message = res.data.message
+      if (this.message){
+        setTimeout(()=>{ location.href = '/Profil'; }, 2000)}
       // location.href = '/Profil';
       // location.reload();
       console.log(res);        
@@ -150,12 +159,13 @@ export default {
      SuppProduct : async function (id) {
         var verify = null
         var result = null
-            console.log(id)
+        
+        console.log(id)
         verify = confirm('Are you sure, do you want to delete this product ?')
         if (verify){
         result = await nounou.deleteProduct(id)
+        location.reload();
         console.log(result)
-
         }
     },
     updateProduct: function(slug){
@@ -175,11 +185,12 @@ export default {
   background-color: #539ee4;
 }
 .route {
- background-color: rgba(83, 158, 228, 0.2);
+ /* background-color: rgba(83, 158, 228, 0.2); */
  color:gray;
  border-bottom: 2px solid #539ee4;
  text-decoration: none;
  border-left: 2px solid #539ee4;
+ font-size: 12px;
 }
 /* v-if="detail.is_admin" */
 </style>

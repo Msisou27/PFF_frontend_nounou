@@ -5,16 +5,18 @@
       <Navbar/>
       
     </div>
-    <router-view/>
+    <router-view/><Footer/>
   </div>
 </template>
 
 <script>
 import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
-    Navbar
+    Navbar,
+    Footer,
   }
 }
 </script>
@@ -26,6 +28,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  margin-bottom:60px;
 }
 
 #nav a {

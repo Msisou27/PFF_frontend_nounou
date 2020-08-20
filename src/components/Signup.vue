@@ -106,7 +106,7 @@ export default {
         this.message = res.data.message
         this.error = res.data.validation_error
         if (this.message){
-        setTimeout(()=>{  location.href = '/Login'; }, 2000)}
+        setTimeout(()=>{ location.href = '/Login'; }, 2000)}
         
         console.log(res);        
     },

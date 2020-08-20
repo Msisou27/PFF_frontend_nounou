@@ -22,10 +22,10 @@
         </div>
         
       </div>
-  </div
-  ><a v-if="!isNotConnect()" @click="logout()" class="text-white" href="">Logout</a>
+  </div>
+  <a v-if="!isNotConnect()" @click="logout()" class="text-white" href="">Logout</a>
 </nav> 
-  
+ 
     </div>
 </template>
 
@@ -51,4 +51,5 @@ export default {
 #nav {
   background-color: 539ee4;
 }
+
 </style>

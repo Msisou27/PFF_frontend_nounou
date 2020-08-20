@@ -61,6 +61,9 @@
   
   <p @click="modifProduct()" type="submit" value="Submit" class="col-md-10 ml-5 btn text-white mt-4 bleu">Modification de votre annonce</p>
 </form>
+  <div v-if="this.message" class="col-md-6 mt-2 ml-auto mr-auto alert alert-success" role="alert">
+  {{this.message}}
+  </div>
     </div>
 </template>
 
@@ -80,6 +83,7 @@ export default {
       location:'',
       town:'',
       price:'',
+      message:'',
    }),
     created() {
     if(localStorage.getItem('token')=='null'){
@@ -103,7 +107,8 @@ export default {
   },
   methods: {
     modifProduct: async function(){
-        
+    this.message='';
+    
     var params = {
     id:this.prod.id,       
     title: this.title,
@@ -117,7 +122,9 @@ export default {
     }
     console.log(params);
     let res = await nounou.updateProduct(params);
-    // location.href = '/Profil';
+    this.message = res.data.message
+    if (this.message){
+        setTimeout(()=>{ location.href = '/Profil'; }, 2000)}
     // location.reload();
     console.log(res);
     },
