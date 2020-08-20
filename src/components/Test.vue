@@ -1,7 +1,7 @@
 <template>
 <div> 
   <div class="row">
-    <div class="col-md-9 mt-3">
+    <div class="col-md-9 mt-3 ml-auto mr-auto">
         <h4 class="bg-white rounded col-md-11 titrechat mt-2 ml-auto mr-auto pt-1">Bienvenue dans le Chat</h4>
         <div class="chat border col-md-11 ml-auto mr-auto mt-4 mb-3 scroller bg-secondary">
             <div v-for="(chatuser,index) in chat" :key="index" class="border bg-white ml-auto mr-auto rounded col-md-10 m-3">
@@ -19,9 +19,9 @@
         </form> 
     </div> 
 
-    <div class="col-md-3 mt-4">
+    <!-- <div class="col-md-3 mt-4">
         <div class="border mr-4">test</div>
-    </div>
+    </div> -->
   </div>
 </div>
 </template>
