@@ -20,15 +20,15 @@
     <div class="bleu text-white m-auto">Les catégories les plus populaires</div>
 
     <div class="col-md-12 row mt-5 mb-5">
-      <div class="col-md-3 text1 ml-auto mr-3 p-0 bordbas">
+      <div class="col-md-3 text1 ml-auto mr-auto p-0 bordbas">
         <img src="@/assets/home.jpg" width="100%" alt="">
         <div class="">Jeux d'extérieurs</div>
       </div>
-      <div class="col-md-3 mr-3 p-0 bordbas text1">
+      <div class="col-md-3 mr-auto ml-auto p-0 bordbas text1">
         <img src="@/assets/home2.jpg" width="100%" alt="">
         <div class="">Poussettes</div>
       </div>
-      <div class="col-md-3 mr-auto p-0 bordbas text1"> 
+      <div class="col-md-3 mr-auto ml-auto p-0 bordbas text1"> 
         <img src="@/assets/home1.jpg" width="100%" alt="">
         <div class="">Jeux d'intérieurs</div>
       </div>
@@ -39,7 +39,7 @@
     <div class="vert text-white m-auto">L'actualité du site et du moment</div> 
 
     <div class="col-md-12 row mt-5 mb-5">  
-      <div class="col-md-3 ml-auto mr-4 p-0 mb-5 bordbas1 bg-white text1">
+      <div class="col-md-3 mr-4 p-0 mb-5 bordbas1 bg-white text1 ml-auto">
         <img src="@/assets/home3.jpg" width="100%" height="385px" alt="" class="border">
         <div class="bg-white">SANT&Eacute;</div>
       </div>
@@ -85,12 +85,12 @@ export default {
 <style scoped>
 .bleu {
    background-color: #539ee4;
-   width:20%;
+   width:260px;
    border-radius: 15px;
 }
 .vert {
    background-color: #00c5ad;
-   width:20%;
+   width:250px;
    border-radius: 15px;
 }
 .text1 {
