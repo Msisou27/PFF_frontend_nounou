@@ -1,9 +1,9 @@
 <template>
 <div>
     <div class="col-md-12 mt-4 mb-4 row">     
-        <h2 class="col-md-6">{{detail.firstname}}, content de vous revoir !</h2>
-        <router-link class="col-md-2 ml-auto btn mt-2 text-uppercase route" to="/Productcrea" >Création d'annonces</router-link>
-        <router-link v-if="detail.is_admin" class="col-md-2 mr-auto btn mt-2 ml-5 text-uppercase route" to="/Gestion" >Administrateur</router-link>       
+        <h2 class="col-md-6 ">{{detail.firstname}}, content de vous revoir !</h2>
+        <router-link class="col-md-2 ml-auto btn mt-2 text-uppercase route text-secondary" to="/Productcrea" >Création d'annonces</router-link>
+        <router-link v-if="detail.is_admin" class="col-md-2 mr-auto btn mt-2 ml-5 text-uppercase route text-secondary " to="/Gestion" >Administrateur</router-link>       
     </div> 
 
 <div class="row m-auto">
@@ -186,11 +186,11 @@ export default {
 }
 .route {
  /* background-color: rgba(83, 158, 228, 0.2); */
- color:gray;
+ 
  border-bottom: 2px solid #539ee4;
  text-decoration: none;
- border-left: 2px solid #539ee4;
  font-size: 12px;
+ font-weight:bolder;
 }
 /* v-if="detail.is_admin" */
 </style>

@@ -6,45 +6,45 @@
     <div class="form-row">
     <div class="form-group col-md-6">
        <label for="validationCustom01">First name</label>
-      <input v-model="firstname" id="firstname" name="firstname" type="text" class="form-control" placeholder="First name">
+      <input v-model="firstname" id="firstname" name="firstname" type="text" class="form-control" placeholder="First name" minlength="3" maxlength="20" required>
     </div>
     <div class="form-group col-md-6">
         <label for="validationCustom01">Last name</label>
-      <input v-model="surname" type="text" class="form-control" placeholder="Last name">
+      <input v-model="surname" type="text" class="form-control" placeholder="Last name" minlength="3" maxlength="20" required>
     </div>
    </div>
    <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputEmail4">Email</label>
-      <input v-model="email" type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <input v-model="email" type="email" class="form-control" id="inputEmail4" placeholder="Email" pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}" minlength="8" maxlength="50" required>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Mot de passe</label>
-      <input v-model="password" type="password" class="form-control" id="inputPassword4" placeholder="Mot de passe">
+      <input v-model="password" type="password" class="form-control" id="inputPassword4" placeholder="Mot de passe" minlength="8" maxlength="40" required>
     </div>
   </div>
   <div class="form-row">
   <div class="form-group col-md-2">
     <label for="inputAddress">N°</label>
-    <input v-model="number_adress" type="text" class="form-control" id="inputAddress" placeholder="1234">
+    <input v-model="number_adress" type="text" minlength="1" maxlength="5" class="form-control" id="inputAddress" placeholder="1234" required>
   </div>
   <div class="form-group col-md-10">
-    <label for="inputAddress2">Addresse</label>
-    <input v-model="adress" type="text" class="form-control" id="inputAddress2" placeholder="Adresse">
+    <label for="inputAddress2">Adresse</label>
+    <input v-model="adress" type="text" class="form-control" minlength="3" maxlength="50" id="inputAddress2" placeholder="Adresse" required>
   </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity">Villes</label>
-      <input v-model="town" type="text" class="form-control" id="inputCity" placeholder="Nom de ville">
+      <input v-model="town" type="text" minlength="3" maxlength="20" class="form-control" id="inputCity" placeholder="Nom de ville" required>
     </div>
     <div class="form-group col-md-3">
       <label for="inputZip">CP</label>
-      <input v-model="location" type="text" class="form-control" id="inputZip" placeholder="code postal">
+      <input v-model="location" type="text" class="form-control" id="inputZip" placeholder="code postal" required minlength="5" maxlength="5">
     </div>
     <div class="form-group col-md-3">
       <label for="inputZip">Mobile</label>
-      <input v-model="phone" type="phone" class="form-control" id="inputphone" placeholder="N° de mobile">
+      <input v-model="phone" type="phone" class="form-control" id="inputphone" placeholder="N° de mobile" required>
     </div>
   </div>
   

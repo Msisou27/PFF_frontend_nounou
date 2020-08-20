@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Le coin des Annonces</h1>
+    <h3 class="mt-4 mb-4">LE COIN DES ANNONCES</h3>
 
     <Addpage/>
   </div>

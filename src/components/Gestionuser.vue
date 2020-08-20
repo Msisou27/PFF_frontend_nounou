@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="m-5">Gestion des utilisateurs</h2>
+        <h3 class="m-5">GESTION DES UTILISATEURS</h3>
  <div class="row ml-auto mr-auto">  
      <div class="col-md-6">
         <h4 class=" bleu text-white rounded">Administrateurs</h4>

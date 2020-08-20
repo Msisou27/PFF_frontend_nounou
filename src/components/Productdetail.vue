@@ -14,8 +14,18 @@
                 <p class="condition text-white">{{prod.used}}</p>
                 </div>
             </div> 
-            <div class="border col-md-10 ml-auto mr-auto mt-4">
-                {{users.firstname}}{{users.email}}{{users.location}}      
+            <div class=" col-md-10 ml-auto mr-auto mt-4">
+              <div class="col-md-12 row">
+                  <div class="col-md-2 ml-auto">
+                    <img src="@/assets/mail.jpg" width="100%" alt="">
+                  </div>
+                  <div class="col-md-3 pt-3 border-left">
+                    <h5 class="border-bottom t pb-2">CONTACTER LE VENDEUR</h5>
+                    <p>Prénom du vendeur: {{users.firstname}}</p> 
+                    <p>Adresse mail: {{users.email}}</p>                   
+                    <p>Localisation: {{users.location}}</p>
+                 </div>
+             </div>   
             </div>       
    
 </div>
@@ -104,5 +114,8 @@ export default {
 .msg {
     font-size: 12px;
     font-weight: bolder;
+}
+.t {
+    color: #539ee4;
 }
 </style>

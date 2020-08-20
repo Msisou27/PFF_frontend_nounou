@@ -4,7 +4,7 @@
 
       <div class="jumbotron jumbotron-fluid jumbor">
         <div class="container">
-           <h1 class="display-4">Un site pour les assistantes maternelles</h1>
+           <h1 class="display-4 h1">LE SITE D'ANNONCES POUR LES ASSISTANTES MATERNELLES</h1>
        <!--   <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
          
        
@@ -16,7 +16,8 @@
        </div>
       </div>
     
-    <h2>Les annonces en ligne - Les catégories les plus populaires</h2>
+    <h3>LES ANNONCES EN LIGNES </h3>
+    <div class="bleu text-white m-auto">Les catégories les plus populaires</div>
 
     <div class="col-md-12 row mt-5 mb-5">
       <div class="col-md-3 text1 ml-auto mr-3 p-0 bordbas">
@@ -34,28 +35,34 @@
     </div>
 
 <div class="bg-light">
-    <h2 class="pt-4">Les Actualités du Coin des nounous</h2>  
+    <h3 class="pt-4">LES ACTUALIT&Eacute;S</h3> 
+    <div class="vert text-white m-auto">L'actualité du site et du moment</div> 
 
     <div class="col-md-12 row mt-5 mb-5">  
       <div class="col-md-3 ml-auto mr-4 p-0 mb-5 bordbas1 bg-white text1">
         <img src="@/assets/home3.jpg" width="100%" height="385px" alt="" class="border">
-        <div class="bg-white">Santé</div>
+        <div class="bg-white">SANT&Eacute;</div>
       </div>
       <div class="col-md-3 mr-4 p-0 mb-5 bordbas1 text1">
         <img src="@/assets/home4.jpg" width="100%" height="385px" alt="" class="border">
-        <div class="bg-white">Hygiène</div>
+        <div class="bg-white">HYGIENE</div>
       </div>
       <div class="col-md-3 mr-auto mb-5 p-0 bordbas1 text1"> 
         <img src="@/assets/home5.jpg" width="100%" height="385px" alt="" class="border">
-        <div class="bg-white">Assistante maternelle</div>
+        <div class="bg-white">ASSISTANTES MATERNELLES</div>
       </div>
     </div>
   </div>
 
  <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Les avantages du sites</h1>
-          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <h1 class="display-4 h1 text-left">QUELQUES MOTS SUR LE SITE</h1>
+          <div>
+          <p class="lead text-left m-auto">Un site dédié au assistantes maternelles.<br>
+            Un site qui évoluera avec vous et avec vos propositions d'améliorations.<br>
+            <span>contactez nous</span></p>
+          
+          </div>
         </div>
       </div>
 
@@ -78,6 +85,13 @@ export default {
 <style scoped>
 .bleu {
    background-color: #539ee4;
+   width:20%;
+   border-radius: 15px;
+}
+.vert {
+   background-color: #00c5ad;
+   width:20%;
+   border-radius: 15px;
 }
 .text1 {
   font-size: 20px;
@@ -93,4 +107,8 @@ export default {
 .jumbor {
    background-color: rgb(83, 158, 228, 0.5);
 }
+.h1{
+  font-size: 35px;
+}
+
 </style>
