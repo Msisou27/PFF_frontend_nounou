@@ -19,7 +19,7 @@
     <h3>LES ANNONCES EN LIGNES </h3>
     <div class="bleu text-white m-auto">Les catégories les plus populaires</div>
 
-    <div class="col-md-12 row mt-5 mb-5">
+    <div class="col-md-12 row mt-5 mb-5 ml-1">
       <div class="col-md-3 text1 ml-auto mr-auto p-0 bordbas">
         <img src="@/assets/home.jpg" width="100%" alt="">
         <div class="">Jeux d'extérieurs</div>
@@ -38,7 +38,7 @@
     <h3 class="pt-4">LES ACTUALIT&Eacute;S</h3> 
     <div class="vert text-white m-auto">L'actualité du site et du moment</div> 
 
-    <div class="col-md-12 row mt-5 mb-5">  
+    <div class="col-md-12 row mt-5 mb-5 ml-1">  
       <div class="col-md-3 mr-4 p-0 mb-5 bordbas1 bg-white text1 ml-auto">
         <img src="@/assets/home3.jpg" width="100%" height="385px" alt="" class="border">
         <div class="bg-white">SANT&Eacute;</div>

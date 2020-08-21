@@ -64,7 +64,7 @@
   <input class="col-md-10 bg-white border mt-3" type="file" @change="uploadImage">
   <button @click="onUpload">Telecharger</button>
 
-  <p @click="newProduct()" type="submit" value="Submit" class="col-md-10 ml-5 btn text-white mt-4 bleu">Création nouvelle annonce</p>
+  <p @click="newProduct()" type="submit" value="Submit" class=" btn text-white mt-4 bleu ml-5 mr-auto">Création nouvelle annonce</p>
 </form>
     
     <div v-if="this.validation" class="col-md-6 m-auto alert alert-success" role="alert">

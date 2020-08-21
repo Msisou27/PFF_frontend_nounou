@@ -23,7 +23,7 @@
         
       </div>
   </div>
-  <a v-if="!isNotConnect()" @click="logout()" class="text-white" href="">Logout</a>
+  <a v-if="!isNotConnect()" @click="logout()" class="text-white ml-auto mr-auto" href="">Logout</a>
 </nav> 
  
     </div>
