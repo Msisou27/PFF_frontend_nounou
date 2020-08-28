@@ -1,8 +1,12 @@
 <template>
     <div>
-        
+      
    <h2 class="vert text-white col-md-6 ml-auto mr-auto mt-4 mb-2 text-decoration-none rounded">Création d'une annonce</h2>
    <!-- <div class="mb-2"><router-link class="retour bleu text-secondary p-1 rounded text-decoration-none" to="/Profil">Retour a mon profil</router-link></div> -->
+      <div class="row col-md-6 m-auto p-1 bg-light border ">
+        <h5 class="ml-auto mt-auto mr-5">Ajoutez votre image</h5>
+      <button @click="openUploadModal" class="btn bleu text-white mr-auto">Parcourir ...</button>
+      </div>
       <form class="col-md-6 text-left border mt-1 p-3 ml-auto mr-auto mb-2 bg-light">
     
   <div class="form-row"> 
@@ -61,9 +65,8 @@
       <input v-model="price" type="text" class="form-control" id="inputZip">
     </div>
 </div>
-  <input class="col-md-10 bg-white border mt-3" type="file" @change="uploadImage">
-  <button @click="onUpload">Telecharger</button>
-
+<input v-model="url" class="form-control" type="text" placeholder="Readonly input here..." readonly>
+  
   <p @click="newProduct()" type="submit" value="Submit" class=" btn text-white mt-4 bleu ml-5 mr-auto">Création nouvelle annonce</p>
 </form>
     
@@ -96,9 +99,8 @@ export default {
       town:'',
       price:'',
       image:'',
-     
       validation:'',
-  
+      url:'',
    }),
     created() {
     if(localStorage.getItem('token')=='null'){
@@ -126,7 +128,7 @@ export default {
       location: this.location,
       town: this.town,
       price: this.price,
-      // image: this.selectedFile.name,
+      image: this.url,
       }
       console.log(params);
       let res = await nounou.createProduct(params);
@@ -137,18 +139,21 @@ export default {
       // location.reload();
       console.log(res);
       },
-      uploadImage(e){
-        
-
-        console.log(e.target.files[0]);
-
-      },
-      onUpload(){
-        const formData = new FormData()
-        formData.append('myFile', this.selectedFile, this.selectedFile.name)
-      }
+      openUploadModal () { 
+               
+        window.cloudinary.openUploadWidget(
+        { cloud_name: 'dqtz7kbwz',
+          upload_preset: 'anobxi9c'
+        },
+        (error, result) => {
+          if (!error && result && result.event === "success") {
+            console.log('Done uploading..: ', result.info);
+            this.url = result.info.url;          }
+        }).open();
+      }     
   }
 }
+
 </script>
 
 <style scoped>

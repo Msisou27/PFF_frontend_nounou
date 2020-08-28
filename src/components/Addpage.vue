@@ -37,7 +37,8 @@
            
           <div class="row p-1">
            <div class="col-md-6">
-             <div class="image m-auto"></div>
+             <div class="image m-auto">
+             <img :src="prod[index].image" alt="" width="240rem" height="240rem"></div>
              </div>
            <div class="col-md-6">
              <h5 class="title text-left">{{prod[index].title}}</h5>
