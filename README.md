@@ -1,6 +1,6 @@
 # PFF_frontend_nounou
 
-Projet de fin de formation chez Dev&Go.
+<B>Projet de fin de formation chez Dev&Go.</B>
 Coding Academy by Epitech.
 
 1- Choix du sujet.<br>
