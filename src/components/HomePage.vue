@@ -56,7 +56,7 @@
 
  <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4 h1 text-left">QUELQUES MOTS SUR LE SITE</h1>
+          <h3 class="display-4 h1 text-left">QUELQUES MOTS SUR LE SITE</h3>
           <div>
           <p class="lead text-left m-auto">Un site dédié au assistantes maternelles.<br>
             Un site qui évoluera avec vous et avec vos propositions d'améliorations.<br>
