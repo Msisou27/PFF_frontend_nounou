@@ -40,15 +40,15 @@
 
     <div class="col-md-12 row mt-5 mb-5 ml-1">  
       <div class="col-md-3 mr-4 p-0 mb-5 bordbas1 bg-white text1 ml-auto">
-        <img src="@/assets/home3.jpg" width="100%" height="385px" alt="" class="border">
+        <img src="@/assets/home3.jpg" width="100%" height="90%px" alt="" class="border">
         <div class="bg-white">SANT&Eacute;</div>
       </div>
       <div class="col-md-3 mr-4 p-0 mb-5 bordbas1 text1">
-        <img src="@/assets/home4.jpg" width="100%" height="385px" alt="" class="border">
+        <img src="@/assets/home4.jpg" width="100%" height="90%" alt="" class="border">
         <div class="bg-white">HYGIENE</div>
       </div>
       <div class="col-md-3 mr-auto mb-5 p-0 bordbas1 text1"> 
-        <img src="@/assets/home5.jpg" width="100%" height="385px" alt="" class="border">
+        <img src="@/assets/home5.jpg" width="100%" height="90%" alt="" class="border">
         <div class="bg-white">ASSISTANTES MATERNELLES</div>
       </div>
     </div>
@@ -56,7 +56,7 @@
 
  <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h3 class="display-4 h1 text-left">QUELQUES MOTS SUR LE SITE</h3>
+          <h4 class="display-4 h1 text-left">QUELQUES MOTS SUR LE SITE</h4>
           <div>
           <p class="lead text-left m-auto">Un site dédié au assistantes maternelles.<br>
             Un site qui évoluera avec vous et avec vos propositions d'améliorations.<br>
