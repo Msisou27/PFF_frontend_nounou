@@ -4,7 +4,7 @@
 
       <div class="jumbotron jumbotron-fluid jumbor">
         <div class="container">
-           <h1 class="display-4 h1">LE SITE D'ANNONCES POUR LES ASSISTANTES MATERNELLES</h1>
+           <h2 class="display-4 h1">LE SITE D'ANNONCES POUR LES ASSISTANTES MATERNELLES</h2>
        <!--   <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
          
        
@@ -94,7 +94,7 @@ export default {
    border-radius: 15px;
 }
 .text1 {
-  font-size: 20px;
+  font-size: 17px;
   font-weight: bolder;
   border-right: gray;
 }
