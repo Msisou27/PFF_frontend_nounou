@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="col-md-12 mt-4 mb-4 row">     
-        <h2 class="col-md-6 ">{{detail.firstname}}, content de vous revoir !</h2>
+        <h2 class="col-md-6 ">Content de vous revoir !</h2>
         <router-link class="col-md-2 ml-auto btn mt-2 text-uppercase route text-secondary" to="/Productcrea" >Création d'annonces</router-link>
         <router-link v-if="detail.is_admin" class="col-md-2 mr-auto btn mt-2 ml-5 text-uppercase route text-secondary " to="/Gestion" >Administrateur</router-link>       
     </div> 

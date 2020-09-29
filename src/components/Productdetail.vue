@@ -4,12 +4,12 @@
         
           
             <div  class="row col-md-10 border m-auto">
-                <div>
-                <img class="image m-auto p-2" src="https://via.placeholder.com/455x400" alt=""></div>
+                <div ><!-- eslint-disable -->
+                <img class="image m-auto p-2" :src="prod.image"></div>
                 <div class="col-md-7">
                 <h3 class="title text-left mt-1"> {{prod.title}}</h3> 
                 <p class="category text-left pl-3">{{prod.category}}</p>
-                <p class="description border"> Descritpion:<br> {{prod.description_long}}</p>
+                <p class="description border"> Description:<br> {{prod.description_long}}</p>
                 <h4 class="price text-left">{{prod.price}} €</h4>
                 <p class="condition text-white">{{prod.used}}</p>
                 </div>
@@ -53,7 +53,7 @@ export default {
     // const resp = await nounou.recupAllUser()
     // this.users =resp.data
     // console.log(this.users)
-
+        
     },
     methods: {
     
