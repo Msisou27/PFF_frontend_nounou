@@ -1,33 +1,31 @@
 <template>
     <div>
-        <h2 class="m-3">Détail produit</h2>
+        <h2 class="m-3 text-left">Détail produit</h2>
         
-          
-            <div  class="row col-md-10 border m-auto">
-                <div ><!-- eslint-disable -->
-                <img class="image m-auto p-2" :src="prod.image"></div>
-                <div class="col-md-7">
-                <h3 class="title text-left mt-1"> {{prod.title}}</h3> 
-                <p class="category text-left pl-3">{{prod.category}}</p>
-                <p class="description border"> Description:<br> {{prod.description_long}}</p>
-                <h4 class="price text-left">{{prod.price}} €</h4>
-                <p class="condition text-white">{{prod.used}}</p>
-                </div>
-            </div> 
-            <div class=" col-md-10 ml-auto mr-auto mt-4">
-              <div class="col-md-12 row">
-                  <div class="col-md-2 ml-auto">
-                    <img src="@/assets/mail.jpg" width="100%" alt="">
-                  </div>
-                  <div class="col-md-3 pt-3 border-left">
-                    <h5 class="border-bottom t pb-2">CONTACTER LE VENDEUR</h5>
+            <div class="row col-md-11 m-auto border">  
+                <div class="row col-md-9" >
+                    <div class= "col-md-5"><!-- eslint-disable -->
+                        <img class="col-md-12 image border mt-3" :src="prod.image">
+                    </div>
+                    <div class="col-md-7 border m-0">
+                        <h3 class="title text-left mt-1"> {{prod.title}}</h3> 
+                        <p class="category text-left pl-3">{{prod.category}}</p>
+                        <p class="description border"> Description:<br> {{prod.description_long}}</p>
+                        <h4 class="price text-left">{{prod.price}} €</h4>
+                        <p class="condition text-white">{{prod.used}}</p>
+                    </div>
+                </div> 
+
+                <div class="border-bottom col-md-3 border">               
+                    <h5 class="mt-4">CONTACTER LE VENDEUR</h5>
                     <p>Prénom du vendeur: {{users.firstname}}</p> 
                     <p>Adresse mail: {{users.email}}</p>                   
                     <p>Localisation: {{users.location}}</p>
                  </div>
-             </div>   
-            </div>       
-   
+
+
+            </div>
+
 </div>
 </template>
 
@@ -84,7 +82,7 @@ export default {
 }
 .image {
     width:100%;
-    height: 23rem;
+    height: 20rem;
 }
 .nav-pills > li > a.active {
     background-color: #539ee4!important;
