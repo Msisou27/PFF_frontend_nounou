@@ -33,14 +33,14 @@
 
     <div class="row m-auto">
       
-         <div v-for="(product, index) in prod" :key="index" class="col-md-5 border mr-auto ml-auto mb-4">     
+         <div v-for="(product, index) in prod" :key="index" class="col-md-5  mr-auto ml-auto mb-4 ">     
            
           <div class="row p-1">
            <div class="col-md-6">
              <div class="image m-auto">
              <img :src="prod[index].image" alt="" width="240rem" height="240rem"></div>
              </div>
-           <div class="col-md-6">
+           <div class="col-md-6 shadow">
              <h5 class="title text-left">{{prod[index].title}}</h5>
              <p class="category text-left pl-2">{{prod[index].category}}</p> 
              <p>{{prod[index].description_short}}</p>  

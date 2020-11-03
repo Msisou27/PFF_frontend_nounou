@@ -1,26 +1,26 @@
 <template>
-    <div>
-        <h2 class="m-5 text-left">Détail produit</h2>
+    <div >
+        <h2 class="m-5 text-left ">Détail produit</h2>
         
             <div class="row col-md-11 m-auto ">  
                 <div class="row col-md-9" >
-                    <div class= "col-md-5 bg-secondary rounded"><!-- eslint-disable -->
+                    <div class= "col-md-4 bg-secondary rounded"><!-- eslint-disable -->
                         <img class="col-md-12 image mt-3" :src="prod.image">
                     </div>
-                    <div class="col-md-7 border m-0">
+                    <div class="col-md-7 shadow">
                         <h3 class="title text-left mt-1"> {{prod.title}}</h3> 
                         <p class="category text-center pl-3 ">{{prod.category}}</p>
-                        <p class="description border"> Description:<br> {{prod.description_long}}</p>
+                        <p class="description border "> <span class="font-weight-bold mb-3"> Description:</span><br> {{prod.description_long}}</p>
                         <h4 class="price text-left">{{prod.price}} €</h4>
                         <p class="condition text-white">{{prod.used}}</p>
                     </div>
                 </div> 
 
-                <div class="border-bottom col-md-3 bg-secondary rounded">               
+                <div class="border-bottom col-md-2 bg-secondary rounded">               
                     <h5 class="mt-4 mb-5 text-white border rounded p-2">CONTACTER LE VENDEUR</h5>
-                    <p class="text-white">Prénom du vendeur: {{users.firstname}}</p> 
-                    <p class="text-white">Adresse mail: {{users.email}}</p>                   
-                    <p class="text-white">Localisation: {{users.location}}</p>
+                    <p class="text-white">Prénom du vendeur: {{user.firstname}}</p> 
+                    <p class="text-white">Adresse mail: {{user.email}}</p>                   
+                    <p class="text-white">Localisation: {{user.location}}</p>
                  </div>
 
 
@@ -37,7 +37,7 @@ export default {
     name:'Productdetail',
     data: ()=>({
         prod:[],
-        users:[],
+        user:[],
         message:'',
         chat:''
     }),
@@ -45,12 +45,10 @@ export default {
     mounted: async function () { 
     const res = await nounou.recupProduct(this.$route.params.slug)
     this.prod = res.data.data
-    this.users = res.data.user
-    console.log(this.prod)
+    this.user = res.data.user
+    // location.reload();
     console.log(res.data)
-    // const resp = await nounou.recupAllUser()
-    // this.users =resp.data
-    // console.log(this.users)
+   
         
     },
     methods: {
