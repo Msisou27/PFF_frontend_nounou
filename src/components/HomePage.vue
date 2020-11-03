@@ -21,16 +21,19 @@
 
     <div class="col-md-12 row mt-5 mb-5 ml-1">
       <div class="col-md-3 text1 ml-auto mr-auto p-0 bordbas">
+      <router-link to="./Annonces" class="text-dark text-decoration-none">  
         <img src="@/assets/home.jpg" width="100%" alt="">
-        <div class="">Jeux d'extérieurs</div>
+        Jeux d'extérieurs</router-link>
       </div>
       <div class="col-md-3 mr-auto ml-auto p-0 bordbas text1">
+        <router-link to="./Annonces" class="text-dark text-decoration-none">
         <img src="@/assets/home2.jpg" width="100%" alt="">
-        <div class="">Poussettes</div>
+        Poussettes</router-link>
       </div>
-      <div class="col-md-3 mr-auto ml-auto p-0 bordbas text1"> 
+      <div class="col-md-3 mr-auto ml-auto p-0 bordbas text1">
+        <router-link to="./Annonces" class="text-dark text-decoration-none"> 
         <img src="@/assets/home1.jpg" width="100%" alt="">
-        <div class="">Jeux d'intérieurs</div>
+        Jeux d'intérieurs</router-link>>
       </div>
     </div>
 
