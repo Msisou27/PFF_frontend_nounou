@@ -1,7 +1,11 @@
 <template>
     <div>
-        <h2 class="vert text-white col-md-6 ml-auto mr-auto mt-4 mb-4 rounded">Modifier Annonce</h2>
-        <form class="col-md-6 text-left border p-3 m-auto bg-light">
+        <h2 class="vert text-white col-md-6 ml-auto mr-auto mt-4 mb-2 rounded">Modifier Annonce</h2>
+         <div class="row col-md-6 mx-auto p-1 bg-light border mb-2">
+        <h5 class="ml-auto mt-auto mr-5">Ajoutez votre image</h5>
+      <button @click="openUploadModal" class="btn bleu text-white m-auto">Parcourir ...</button>
+      </div>
+        <form class="col-md-6 text-left border p-3 m-auto bg-light mt-1">
     
   <div class="form-row"> 
     <div class="form-group col-md-6">
@@ -57,8 +61,9 @@
       <label for="inputZip">Prix de vente</label>
       <input v-model="price" type="text" class="form-control" id="inputZip">
     </div>
+
 </div>
-  
+  <input v-model="image" class="form-control " type="text" placeholder="image" readonly>
   <p @click="modifProduct()" type="submit" value="Submit" class="col-md-10 ml-5 btn text-white mt-4 bleu">Modification de votre annonce</p>
 </form>
   <div v-if="this.message" class="col-md-6 mt-2 ml-auto mr-auto alert alert-success" role="alert">
@@ -84,6 +89,8 @@ export default {
       town:'',
       price:'',
       message:'',
+      image:'',
+      url:''
    }),
     created() {
     if(localStorage.getItem('token')=='null'){
@@ -103,6 +110,8 @@ export default {
     this.location = this.prod.location
     this.town = this.prod.town
     this.price = this.prod.price
+    this.image = this.prod.image
+
 
   },
   methods: {
@@ -119,6 +128,7 @@ export default {
     location: this.location,
     town: this.town,
     price: this.price,
+    image:this.url,
     }
     console.log(params);
     let res = await nounou.updateProduct(params);
@@ -128,6 +138,18 @@ export default {
     // location.reload();
     console.log(res);
     },
+    openUploadModal () { 
+               
+        window.cloudinary.openUploadWidget(
+        { cloud_name: 'dqtz7kbwz',
+          upload_preset: 'anobxi9c'
+        },
+        (error, result) => {
+          if (!error && result && result.event === "success") {
+            console.log('Done uploading..: ', result.info);
+            this.url = result.info.url;          }
+        }).open();
+      } 
   }
 }
 </script>

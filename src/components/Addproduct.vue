@@ -65,7 +65,7 @@
       <input v-model="price" type="text" class="form-control" id="inputZip">
     </div>
 </div>
-<input v-model="url" class="form-control" type="text" placeholder="Readonly input here..." readonly>
+<input v-model="url" class="form-control invisible" type="text" placeholder="Readonly input here..." readonly>
   
   <p @click="newProduct()" type="submit" value="Submit" class=" btn text-white mt-4 bleu ml-5 mr-auto">Création nouvelle annonce</p>
 </form>
