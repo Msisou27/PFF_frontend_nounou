@@ -63,7 +63,7 @@
     </div>
 
 </div>
-  <input v-model="image" class="form-control " type="text" placeholder="image" readonly>
+  <input v-model="url" class="form-control " type="text" placeholder="image" readonly>
   <p @click="modifProduct()" type="submit" value="Submit" class="col-md-10 ml-5 btn text-white mt-4 bleu">Modification de votre annonce</p>
 </form>
   <div v-if="this.message" class="col-md-6 mt-2 ml-auto mr-auto alert alert-success" role="alert">

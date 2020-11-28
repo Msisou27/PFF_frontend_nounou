@@ -1,9 +1,9 @@
 <template>
     <div >
-<div class="">
-  <form class="form-inline bleu pt-1 pb-1 mb-5 pl-5">
+<div class="mx-2">
+  <form class="form-inline bleu pt-1 pb-1 mb-5 ">
     
-      <input v-model="q" class="form-control col-md-3 mt-2 mb-2" @keyup="searchProduct" type="search" placeholder="Search" aria-label="Search">
+      <input v-model="q" class="form-control col-md-3 mt-2 mb-2 mx-2" @keyup="searchProduct" type="search" placeholder="Search" aria-label="Search">
       <a href="" class="mr-3"><img src="https://img.icons8.com/ios/30/000000/cancel.png"/></a>
 
       <div class="form-group col-md-4 ">
@@ -18,7 +18,7 @@
         <option>Produits de sécurité</option>
         </select>
       </div>
-      <div class="form-group col-md-3 mr-5">
+      <div class="form-group col-md-4">
       <label for="exampleFormControlSelect2" class="mr-2 text-secondary">Condition</label>
       <select v-model="key2"  @change="onChangeCondition($event)" type="text" class="form-control" id="exampleFormControlSelect2" >
         <option>Comme neuf</option>

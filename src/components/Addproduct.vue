@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mx-2">
       
    <h2 class="vert text-white col-md-6 ml-auto mr-auto mt-4 mb-2 text-decoration-none rounded">Création d'une annonce</h2>
    <!-- <div class="mb-2"><router-link class="retour bleu text-secondary p-1 rounded text-decoration-none" to="/Profil">Retour a mon profil</router-link></div> -->

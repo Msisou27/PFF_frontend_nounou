@@ -10,9 +10,9 @@
        
 
         </div> <div class="row ">
-          <div class="col-md-2 border-right text1 bg-white bordbas1 ml-auto">Annonces</div>
-          <div class="col-md-2 border-right text1 bg-white bordbas1">Chat</div>
-          <div class="col-md-2 text1 bg-white bordbas1 mr-auto">Actualités</div>
+          <div class="col-md-2 border-right text1 bg-white bordbas1 mx-auto">Annonces</div>
+          <div class="col-md-2 border-right text1 bg-white bordbas1 mx-auto">Chat</div>
+          <div class="col-md-2 text1 bg-white bordbas1 mx-auto">Actualités</div>
        </div>
       </div>
     
@@ -41,7 +41,7 @@
     <h3 class="pt-4">LES ACTUALIT&Eacute;S</h3> 
     <div class="vert text-white m-auto">L'actualité du site et du moment</div> 
 
-    <div class="col-md-12 row mt-5 mb-5 ml-1">  
+    <div class="col-md-12 row mt-5 mb-5 ml-1 mx-auto">  
       <div class="col-md-3 mr-4 p-0 mb-5 bordbas1 bg-white text1 ml-auto">
         <img src="@/assets/home3.jpg" width="100%" height="90%px" alt="" class="border">
         <div class="bg-white">SANT&Eacute;</div>
@@ -106,6 +106,8 @@ export default {
 }
 .bordbas1 {
   border-bottom: 3px solid #00c5ad;
+  margin: 5px;
+  width: 300px;
 }
 .jumbor {
    background-color: rgb(83, 158, 228, 0.5);

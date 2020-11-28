@@ -2,14 +2,14 @@
 <div>
     <div class="col-md-12 mt-4 mb-4 row">     
         <h2 class="col-md-6 ">Content de vous revoir !</h2>
-        <router-link class="col-md-2 ml-auto btn mt-2 text-uppercase route text-secondary" to="/Productcrea" >Création d'annonces</router-link>
+        <router-link class="col-md-2 ml-5 btn mt-2 text-uppercase route text-secondary" to="/Productcrea" >Création d'annonces</router-link>
         <router-link v-if="detail.is_admin" class="col-md-2 mr-auto btn mt-2 ml-5 text-uppercase route text-secondary " to="/Gestion" >Administrateur</router-link>       
     </div> 
 
 <div class="row m-auto">
   <div class="col-md-6">
-    <h2 class="bleu text-white rounded">Mes données</h2>
-      <form class="text-left border p-3 bg-light">
+    <h2 class="bg-secondary text-white rounded">Mes données</h2>
+      <form class="text-left shadow p-3 bg-light">
     
    <div class="form-row"> 
     <div class="form-group col-md-6">
@@ -65,7 +65,7 @@
 
        <div class="col-md-6">
           <div >
-            <h2 class="vert text-white rounded">Mes annonces</h2>
+            <h2 class="bg-secondary rounded text-white">Mes annonces</h2>
             <div class="border-bottom p-2" v-for="(productuser, index) in prod" :key="index">
                   
           <div class="row bg-light">        
